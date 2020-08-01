@@ -24,3 +24,13 @@ $ pip3 install flask && python3 server.py
   ...
 </head>
 ```
+<!--
+Basic structure for every HTML5 website. : DONE
+The Link tag to import CSS Rules. : DONE
+Using google fonts. : DONE
+Using the different selectors available in CSS.
+Working with boxes: border, padding and margins.
+Overflow.
+Using Flex vs Postion vs Float vs Display.
+Using a simple form.
+-->

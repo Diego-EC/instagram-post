@@ -1,0 +1,23 @@
+#buttonLikeObject { 
+    border: none; 
+    background: white;
+    outline: none; /* so it don't highlight the border with autofocus when you click on the button */
+}
+.wrapper{
+    background: black;
+}
+.flex-container{
+    background: white;
+    display: flex; /* Flexbox Layout: this is a flex container.  */
+    flex-direction: column; /* The column value stacks the flex items vertically (from top to bottom) */
+    align-items: center; /* alignment for items inside the flexible container, in the cross axis */
+}
+.fa-heart{
+    color: black;
+}
+.fa-heart:focus{
+    color: red;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
