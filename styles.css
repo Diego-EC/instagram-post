@@ -3,21 +3,91 @@
     background: white;
     outline: none; /* so it don't highlight the border with autofocus when you click on the button */
 }
+button{
+    border: none; 
+    background: white;
+    outline: none; /* so it don't highlight the border with autofocus when you click on the button */
+}
 .wrapper{
-    background: black;
+    background: white;
+}
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .flex-container{
-    background: white;
+    /* unnecessary all of this since we have .centred */
     display: flex; /* Flexbox Layout: this is a flex container.  */
     flex-direction: column; /* The column value stacks the flex items vertically (from top to bottom) */
     align-items: center; /* alignment for items inside the flexible container, in the cross axis */
 }
-.fa-heart{
-    color: black;
+.post{
+    width: 560px; /* so that all the inputs have the same width */
+    height: 780px;
+    display: flex; /* Flexbox Layout: this is a flex container.  */
+    flex-flow: column nowrap; /* Flex Flow - A Shorthand for Flex-direction and Flex-wrap */
 }
-.fa-heart:focus{
-    color: red;
+.post-head{
+	display: flex;
+	height: 70px;
+    justify-content: space-between;
+    align-items: center;
+	text-align: center;
+}
+.fontawesome-button{
+    font-size: 35px;
+}
+.post-head-account{
+    display: flex;
+    align-items: center; /* alignment for items inside the flexible container, in the cross axis */
+}
+.user-photo{
+    width: 60px;
+}
+.user-name{
+    text-align: left;
+    font-size: 17px;
+}
+p.user-name-title{
+    font-weight: bold;
+}
+.user-name p{
+    margin: 1px; /* para serparar los parramos del nombre de usuario */
+}
+.post-head-menu{
+    padding-right: 20px; /* para dejar espacio a la derecha */
+}
+.post-body{
+	flex: 1; /* 1 and it will fill whole space left if no flex value are set to other children */
+    align-content: center;
+}
+.post-body img {
+    width: 100%;
+    height: 100%;
+}
+.post-foot{
+    /*https://codepen.io/carl-vega/pen/KbGyYX*/
+	height: 240px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+    justify-content: flex-start;
+}
+.post-foot-menu{
+    display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px 0 10px; /* padding = padding-top, padding-right, padding-bottom, padding-left */
+
+}
+.post-foot-text > p{
+    text-align: left;
+    padding: 0 10px 0 10px; /* padding = padding-top, padding-right, padding-bottom, padding-left */
+    font-size: 18px;
 }
 body{
     font-family: 'Roboto', sans-serif;
+    background: black;
 }

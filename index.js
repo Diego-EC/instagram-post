@@ -1,10 +1,11 @@
 window.onload = function() {
     console.log("window.onload");
-    //document.getElementById("excuse").innerHTML = "LOL";
 };
 
 var btnLike = document.querySelector("#buttonLikeText");
 btnLike.addEventListener('click', () => buttonLike_OnClick() );
+var btnBookmark = document.querySelector("#buttonBookmarkText");
+btnBookmark.addEventListener('click', () => buttonBookmark_OnClick() );
 
 function buttonLike_OnClick(){
     event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
@@ -21,4 +22,9 @@ function buttonLike_OnClick(){
         document.getElementById("buttonLikeText").style.color = 'black';
         document.getElementById("buttonLikeObject").value = 'unmarked';
     }
+}
+
+function buttonBookmark_OnClick(){
+    event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
+    console.log("buttonBookmark_OnClick");
 }

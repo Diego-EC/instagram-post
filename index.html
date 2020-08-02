@@ -7,21 +7,49 @@
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper centered">
             <div class="flex-container">
-                <div>
-                    <p>Uno</p>
-                </div>
-                <div>
-                    <p>Dos</p>
-                </div>
-                <div>
-                    <p>Tres</p>
-                    <form>
-                        <button id="buttonLikeObject" value="unmarked">
-                            <i id="buttonLikeText" class="far fa-heart"></i>
-                        </button>
-                    </form>
+                <div class="post">
+                    <!-- Post Head -->
+                    <div class="post-head">
+                        <div class="post-head-account">
+                            <div class="user-photo">
+                                <i class="fontawesome-button fab fa-html5"></i>
+                            </div>
+                            <div class="user-name">
+                                <p class="user-name-title">HTML5</p>
+                                <p>Rigoberto</p>
+                            </div>
+                        </div>
+                        <div class="post-head-menu">
+                            <i class="fontawesome-button fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <!-- Post Body / Image -->
+                    <div class="post-body">
+                        <img src="./images/picture.jpg" alt="picture">
+                    </div>
+                    <!-- Post Foot -->
+                    <div class="post-foot">
+                        <div class="post-foot-menu">
+                            <form>
+                                <button id="buttonLikeObject" value="unmarked">
+                                    <i id="buttonLikeText" class="fontawesome-button far fa-heart"></i>
+                                </button>
+                                <button><i class="fontawesome-button far fa-comment"></i></button>
+                                <button><i class="fontawesome-button far fa-paper-plane"></i></button>
+                            </form>
+                            <form>
+                                <button id="buttonBookmarkObject" value="unmarked">
+                                    <i id="buttonBookmarkText" class="fontawesome-button far fa-bookmark"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="post-foot-text">
+                            <p>Liked by <strong>4GeeksAcademy, html5, Web</strong> and <strong>100,000 others</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
