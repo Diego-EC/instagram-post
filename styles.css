@@ -9,7 +9,9 @@ button{
     outline: none; /* so it don't highlight the border with autofocus when you click on the button */
 }
 .wrapper{
-    background: white;
+    width: 970px;
+    height: 100%;
+    background: black;
 }
 .centered {
     position: fixed;
@@ -20,18 +22,21 @@ button{
 .flex-container{
     /* unnecessary all of this since we have .centred */
     display: flex; /* Flexbox Layout: this is a flex container.  */
-    flex-direction: column; /* The column value stacks the flex items vertically (from top to bottom) */
     align-items: center; /* alignment for items inside the flexible container, in the cross axis */
+    justify-content: center; /* to align the flex items in the main axis */
+    height: 100%;
 }
 .post{
     width: 560px; /* so that all the inputs have the same width */
-    height: 780px;
+    height: 770px;
     display: flex; /* Flexbox Layout: this is a flex container.  */
     flex-flow: column nowrap; /* Flex Flow - A Shorthand for Flex-direction and Flex-wrap */
+    background: white;
+
 }
 .post-head{
 	display: flex;
-	height: 70px;
+	height: 72px;
     justify-content: space-between;
     align-items: center;
 	text-align: center;
@@ -44,11 +49,12 @@ button{
     align-items: center; /* alignment for items inside the flexible container, in the cross axis */
 }
 .user-photo{
-    width: 60px;
+    width: 48px;
+    margin-left: 3px;
 }
 .user-name{
     text-align: left;
-    font-size: 17px;
+    font-size: 18px;
 }
 p.user-name-title{
     font-weight: bold;
@@ -57,7 +63,7 @@ p.user-name-title{
     margin: 1px; /* para serparar los parramos del nombre de usuario */
 }
 .post-head-menu{
-    padding-right: 20px; /* para dejar espacio a la derecha */
+    padding-right: 17px; /* para dejar espacio a la derecha */
 }
 .post-body{
 	flex: 1; /* 1 and it will fill whole space left if no flex value are set to other children */
@@ -69,7 +75,7 @@ p.user-name-title{
 }
 .post-foot{
     /*https://codepen.io/carl-vega/pen/KbGyYX*/
-	height: 240px;
+	height: 270px;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -79,15 +85,24 @@ p.user-name-title{
     display: flex;
 	flex-direction: row;
     justify-content: space-between;
-    padding: 10px 20px 0 10px; /* padding = padding-top, padding-right, padding-bottom, padding-left */
+    padding: 20px 20px 0 10px; /* padding = padding-top, padding-right, padding-bottom, padding-left */
 
 }
 .post-foot-text > p{
     text-align: left;
-    padding: 0 10px 0 10px; /* padding = padding-top, padding-right, padding-bottom, padding-left */
+    padding: 10px 15px 0 15px; /* padding = padding-top, padding-right, padding-bottom, padding-left */
     font-size: 18px;
+    margin-bottom: 0;
+}
+p:nth-child(2) {
+  padding-top: 0px;
 }
 body{
     font-family: 'Roboto', sans-serif;
-    background: black;
+    background: #101010 ;
+}
+/* t */
+button:disabled{
+    /*https://stackoverflow.com/questions/14750078/style-disabled-button-with-css*/
+    color: black;
 }
