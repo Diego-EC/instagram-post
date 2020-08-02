@@ -10,6 +10,7 @@ btnBookmark.addEventListener('click', () => buttonBookmark_OnClick() );
 function buttonLike_OnClick(){
     event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
     console.log("buttonLike_OnClick");
+
     let buttonValue = document.getElementById("buttonLikeObject").value;
     if(buttonValue === 'unmarked'){
         document.getElementById("buttonLikeText").classList.add("fas");
@@ -27,4 +28,15 @@ function buttonLike_OnClick(){
 function buttonBookmark_OnClick(){
     event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
     console.log("buttonBookmark_OnClick");
+
+    let buttonValue = document.getElementById("buttonBookmarkObject").value;
+    if(buttonValue === 'unmarked'){
+        document.getElementById("buttonBookmarkText").classList.add("fas");
+        document.getElementById("buttonBookmarkText").classList.remove('far');
+        document.getElementById("buttonBookmarkObject").value = 'marked';
+    }else{
+        document.getElementById("buttonBookmarkText").classList.add("far");
+        document.getElementById("buttonBookmarkText").classList.remove('fas');
+        document.getElementById("buttonBookmarkObject").value = 'unmarked';
+    }
 }
