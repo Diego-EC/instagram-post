@@ -1,7 +1,6 @@
-#buttonLikeObject { 
-    border: none; 
-    background: white;
-    outline: none; /* so it don't highlight the border with autofocus when you click on the button */
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #101010 ;
 }
 button{
     border: none; 
@@ -20,7 +19,6 @@ button{
     transform: translate(-50%, -50%);
 }
 .flex-container{
-    /* unnecessary all of this since we have .centred */
     display: flex; /* Flexbox Layout: this is a flex container.  */
     align-items: center; /* alignment for items inside the flexible container, in the cross axis */
     justify-content: center; /* to align the flex items in the main axis */
@@ -32,7 +30,6 @@ button{
     display: flex; /* Flexbox Layout: this is a flex container.  */
     flex-flow: column nowrap; /* Flex Flow - A Shorthand for Flex-direction and Flex-wrap */
     background: white;
-
 }
 .post-head{
 	display: flex;
@@ -40,9 +37,6 @@ button{
     justify-content: space-between;
     align-items: center;
 	text-align: center;
-}
-.fontawesome-button{
-    font-size: 35px;
 }
 .post-head-account{
     display: flex;
@@ -94,15 +88,16 @@ p.user-name-title{
     font-size: 18px;
     margin-bottom: 0;
 }
+.fontawesome-button{
+    font-size: 35px;
+}
+/* pseudo-class: select element that is the second child of its parent */
 p:nth-child(2) {
   padding-top: 0px;
 }
-body{
-    font-family: 'Roboto', sans-serif;
-    background: #101010 ;
-}
-/* t */
+/* buttons functionality - ini */
 button:disabled{
     /*https://stackoverflow.com/questions/14750078/style-disabled-button-with-css*/
     color: black;
 }
+/* buttons functionality - fin */
