@@ -6,6 +6,8 @@ var btnLike = document.querySelector("#buttonLikeText");
 btnLike.addEventListener('click', () => buttonLike_OnClick() );
 var btnBookmark = document.querySelector("#buttonBookmarkText");
 btnBookmark.addEventListener('click', () => buttonBookmark_OnClick() );
+var btnMenu = document.querySelector("#buttonVerticalMenuText");
+btnMenu.addEventListener('click', () => buttonMenu_OnClick() );
 
 function buttonLike_OnClick(){
     event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
@@ -38,5 +40,20 @@ function buttonBookmark_OnClick(){
         document.getElementById("buttonBookmarkText").classList.add("far");
         document.getElementById("buttonBookmarkText").classList.remove('fas');
         document.getElementById("buttonBookmarkObject").value = 'unmarked';
+    }
+}
+
+function buttonMenu_OnClick(){
+    event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
+    console.log("buttonMenu_OnClick");
+        
+    let menuDisplay = document.getElementById("verticalMenu");
+    let buttonValue = document.getElementById("buttonVerticalMenuObject").value;
+    if(buttonValue === 'unmarked'){
+        document.getElementById("buttonVerticalMenuObject").value = 'marked';
+        menuDisplay.style.display = "block";
+    }else{
+        document.getElementById("buttonVerticalMenuObject").value = 'unmarked';
+        menuDisplay.style.display = "none";
     }
 }

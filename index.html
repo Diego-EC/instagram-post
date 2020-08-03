@@ -22,7 +22,19 @@
                             </div>
                         </div>
                         <div class="post-head-menu">
-                            <i class="fontawesome-button fas fa-ellipsis-v"></i>
+                            <button id="buttonVerticalMenuObject" class="buttonEnabled" value="unmarked">
+                                <i id="buttonVerticalMenuText" class="fontawesome-button fas fa-ellipsis-v"></i></nav>
+                            </button>
+                            <!--<input type="checkbox">-->
+                            <nav id="verticalMenu" class="verticalMenu">
+                                <ul>
+                                    <li><a href="">Profile</a></li>
+                                    <li><a href="">Configuration</a></li>
+                                    <li><a href="">Invite</a></li>
+                                    <li><a href="">Favorites</a></li>
+                                    <li><a href="">Close</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                     <!-- Post Body / Image -->
@@ -33,14 +45,14 @@
                     <div class="post-foot">
                         <div class="post-foot-menu">
                             <form>
-                                <button id="buttonLikeObject" value="unmarked">
+                                <button id="buttonLikeObject" class="buttonEnabled" value="unmarked">
                                     <i id="buttonLikeText" class="fontawesome-button far fa-heart fa-3x"></i>
                                 </button>
                                 <button disabled="true"><i class="fontawesome-button far fa-comment fa-3x"></i></button>
                                 <button disabled="true"><i class="fontawesome-button far fa-paper-plane fa-3x"></i></button>
                             </form>
                             <form>
-                                <button id="buttonBookmarkObject" value="unmarked">
+                                <button id="buttonBookmarkObject" class="buttonEnabled" value="unmarked">
                                     <i id="buttonBookmarkText" class="fontawesome-button far fa-bookmark fa-3x"></i>
                                 </button>
                             </form>
