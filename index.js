@@ -1,59 +1,71 @@
+const UNMARKED = "unmarked";
+const MARKED = "marked";
+
 window.onload = function() {
     console.log("window.onload");
 };
 
-var btnLike = document.querySelector("#buttonLikeText");
-btnLike.addEventListener('click', () => buttonLike_OnClick() );
-var btnBookmark = document.querySelector("#buttonBookmarkText");
-btnBookmark.addEventListener('click', () => buttonBookmark_OnClick() );
-var btnMenu = document.querySelector("#buttonVerticalMenuText");
-btnMenu.addEventListener('click', () => buttonMenu_OnClick() );
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
 
-function buttonLike_OnClick(){
+    var btnLike = document.querySelector("#buttonLikeText");
+    btnLike.addEventListener('click', () => changeLikeStatus() );
+    var btnBookmark = document.querySelector("#buttonBookmarkText");
+    btnBookmark.addEventListener('click', () => changeBookmarkStatus() );
+    var btnMenu = document.querySelector("#buttonVerticalMenuText");
+    btnMenu.addEventListener('click', () => openCloseMenu() );
+});
+
+function changeLikeStatus(){
+    console.log("changeLikeStatus");
     event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
-    console.log("buttonLike_OnClick");
 
-    let buttonValue = document.getElementById("buttonLikeObject").value;
-    if(buttonValue === 'unmarked'){
-        document.getElementById("buttonLikeText").classList.add("fas");
-        document.getElementById("buttonLikeText").classList.remove('far');
-        document.getElementById("buttonLikeText").style.color = 'red';
-        document.getElementById("buttonLikeObject").value = 'marked';
+    // podemos hacer algo como let div = document.getElementById()
+    // y luego usar div.classList y div.value etc etc
+
+    let buttonObject = document.getElementById("buttonLikeObject");
+    let buttonText = document.getElementById("buttonLikeText");
+    if(buttonObject.value === UNMARKED){
+        buttonText.classList.add("fas");
+        buttonText.classList.remove('far');
+        buttonText.style.color = 'red';
+        buttonObject.value = MARKED;
     }else{
-        document.getElementById("buttonLikeText").classList.add("far");
-        document.getElementById("buttonLikeText").classList.remove('fas');
-        document.getElementById("buttonLikeText").style.color = 'black';
-        document.getElementById("buttonLikeObject").value = 'unmarked';
+        buttonText.classList.add("far");
+        buttonText.classList.remove('fas');
+        buttonText.style.color = 'black';
+        buttonObject.value = UNMARKED;
     }
 }
 
-function buttonBookmark_OnClick(){
+function changeBookmarkStatus(){
+    console.log("changeBookmarkStatus");
     event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
-    console.log("buttonBookmark_OnClick");
 
-    let buttonValue = document.getElementById("buttonBookmarkObject").value;
-    if(buttonValue === 'unmarked'){
-        document.getElementById("buttonBookmarkText").classList.add("fas");
-        document.getElementById("buttonBookmarkText").classList.remove('far');
-        document.getElementById("buttonBookmarkObject").value = 'marked';
+    let buttonObject = document.getElementById("buttonBookmarkObject");
+    let buttonText = document.getElementById("buttonBookmarkText");
+    if(buttonObject.value === UNMARKED){
+        buttonText.classList.add("fas");
+        buttonText.classList.remove('far');
+        buttonObject.value = MARKED;
     }else{
-        document.getElementById("buttonBookmarkText").classList.add("far");
-        document.getElementById("buttonBookmarkText").classList.remove('fas');
-        document.getElementById("buttonBookmarkObject").value = 'unmarked';
+        buttonText.classList.add("far");
+        buttonText.classList.remove('fas');
+        buttonObject.value = UNMARKED;
     }
 }
 
-function buttonMenu_OnClick(){
+function openCloseMenu(){
+    console.log("openCloseMenu");
     event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
-    console.log("buttonMenu_OnClick");
         
     let menuDisplay = document.getElementById("verticalMenu");
-    let buttonValue = document.getElementById("buttonVerticalMenuObject").value;
-    if(buttonValue === 'unmarked'){
-        document.getElementById("buttonVerticalMenuObject").value = 'marked';
+    let buttonValue = document.getElementById("buttonVerticalMenuObject");
+    if(buttonValue.value === UNMARKED){
+        buttonValue.value = MARKED;
         menuDisplay.style.display = "block";
     }else{
-        document.getElementById("buttonVerticalMenuObject").value = 'unmarked';
+        buttonValue.value = UNMARKED;
         menuDisplay.style.display = "none";
     }
 }
