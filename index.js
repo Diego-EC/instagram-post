@@ -20,9 +20,6 @@ function changeLikeStatus(){
     console.log("changeLikeStatus");
     event.preventDefault(); /*prevent it from submitting a form; it was refreshing the entire web and did not retain the button color.*/ 
 
-    // podemos hacer algo como let div = document.getElementById()
-    // y luego usar div.classList y div.value etc etc
-
     let buttonObject = document.getElementById("buttonLikeObject");
     let buttonText = document.getElementById("buttonLikeText");
     if(buttonObject.value === UNMARKED){

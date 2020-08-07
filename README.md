@@ -1,36 +1,15 @@
-# ![4Geeks Logo](http://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=4geeks,16) HTML Hello
+Code exercise of the 'Day 1' of the 'Full-Stack Web Developer' bootcamp of 4Geeks Academy.
+https://student.breatheco.de/course/full-stack.v3/1/a/instagram-post
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/html-hello.git)
++ Importan: Remember execute the following commands to instala flask and run the servers. $ pip3 install flask && python3 server.py`
 
-The most basic boilerplate for any 4Geeks Academy Student using the [gitpod.io](gitpod.io) coding editor.
++ In this project I've use the Flexbox Layout to give order to the items.
 
-[![How to open html/css preview of my project in gitpod](https://ucarecdn.com/573d0bef-9c8c-48dd-a6ef-401972dff96d/)](https://youtu.be/dfbDCMu_p-0)
++ Notes: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    - justify-content: center; /* used for the main axis / 
+    - align-items: center; / used for the cross axis */
 
-## What to do next?
++ Flexbox: also very well explained here: https://www.w3schools.com/css/css3_flexbox.asp -> Summary: 1.- A Flexible Layout must have a parent element with the display property set to flex. 2.- display: flex; /* Flexbox Layout: The flex container becomes flexible by setting the display property to flex. */ 3.- Direct child elements(s) of the flexible container automatically becomes flexible items.
 
-Create a `index.html` file with the [basic HTML structure](http://content.breatheco.de/lesson/what-is-html-learn-html#page-structure) and see it live by running web-server using the following command:
-
-```sh
-$ pip3 install flask && python3 server.py
-```
-
-- You can create as many HTML files you want
-- You can also create CSS files and you can import them onto your website using a `<link>` tag placed between the `<head></head>` tags, like this:
-
-```html
-<head>
-  ...
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
-<!--
-Basic structure for every HTML5 website. : DONE
-The Link tag to import CSS Rules. : DONE
-Using google fonts. : DONE
-Using the different selectors available in CSS.
-Working with boxes: border, padding and margins.
-Overflow.
-Using Flex vs Postion vs Float vs Display.
-Using a simple form.
--->
++ onclick="return false;"
+    on a 'a' tag, This will prevent your page reloading.

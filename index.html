@@ -24,16 +24,15 @@
                         </div>
                         <div class="post-head-menu">
                             <button id="buttonVerticalMenuObject" class="buttonEnabled" value="unmarked">
-                                <i id="buttonVerticalMenuText" class="fontawesome-button fas fa-ellipsis-v"></i></nav>
+                                <i id="buttonVerticalMenuText" class="fontawesome-button fas fa-ellipsis-v"></i>
                             </button>
-                            <!--<input type="checkbox">-->
                             <nav id="verticalMenu" class="verticalMenu">
                                 <ul>
-                                    <li><a href="">Profile</a></li>
-                                    <li><a href="">Configuration</a></li>
-                                    <li><a href="">Invite</a></li>
-                                    <li><a href="">Favorites</a></li>
-                                    <li><a href="">Close</a></li>
+                                    <li><a href="" onclick="return false;">Profile</a></li>
+                                    <li><a href="" onclick="return false;">Configuration</a></li>
+                                    <li><a href="" onclick="return false;">Invite</a></li>
+                                    <li><a href="" onclick="return false;">Favorites</a></li>
+                                    <li><a href="" onclick="return false;">Close</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -44,18 +43,20 @@
                     </div>
                     <!-- Post Foot -->
                     <div class="post-foot">
-                        <div class="post-foot-menu">
-                            <form>
-                                <button id="buttonLikeObject" class="buttonEnabled" value="unmarked">
-                                    <i id="buttonLikeText" class="fontawesome-button far fa-heart fa-3x"></i>
-                                </button>
-                                <button disabled="true"><i class="fontawesome-button far fa-comment fa-3x"></i></button>
-                                <button disabled="true"><i class="fontawesome-button far fa-paper-plane fa-3x"></i></button>
-                            </form>
-                            <form>
-                                <button id="buttonBookmarkObject" class="buttonEnabled" value="unmarked">
-                                    <i id="buttonBookmarkText" class="fontawesome-button far fa-bookmark fa-3x"></i>
-                                </button>
+                        <div>
+                            <form class="post-foot-menu">
+                                <div class="left">
+                                    <button id="buttonLikeObject" class="buttonEnabled" value="unmarked">
+                                        <i id="buttonLikeText" class="fontawesome-button far fa-heart fa-3x"></i>
+                                    </button>
+                                    <button disabled="true"><i class="fontawesome-button far fa-comment fa-3x"></i></button>
+                                    <button disabled="true"><i class="fontawesome-button far fa-paper-plane fa-3x"></i></button>
+                                </div>
+                                <div class="right">
+                                    <button id="buttonBookmarkObject" class="buttonEnabled" value="unmarked">
+                                        <i id="buttonBookmarkText" class="fontawesome-button far fa-bookmark fa-3x"></i>
+                                    </button>
+                                </div>
                             </form>
                         </div>
                         <div class="post-foot-text">
